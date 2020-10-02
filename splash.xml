@@ -13,15 +13,6 @@
 	  <pos>0.27 0.768</pos>
 	  <origin>0 0</origin>
     </image>
-    <image name="sub_progressbar" extra="true">
-      <!-- <color>DF2000DF</color> -->
-	  <pos>0.275 0.768</pos>
-	  <origin>0 0</origin>
-	  <tile>true</tile>
-	  <path>./art/splash/progress.png</path>
-	  <size>0.5 0.04</size>
-	  <zIndex>95</zIndex>
-    </image>
     <image name="progressbar:active">
       <color>DF2000DF</color>
     </image>

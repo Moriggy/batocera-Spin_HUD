@@ -5,6 +5,14 @@
 ####									 ####
 ####		Tipo de vista Hyperspin		 ####
 #############################################
+
+.....................................
+ Valores Hexadecimales de Opacidad / Hex Opacity Values
+
+Opaque/Opaco                           Translucide / Translucido                             Invisible
+100%  95%  90%  85%  80%  75%  70%  65%  60%  65%  50%  45%  40%  35%  30%  25%  20%  15%  10%  5%  0%
+ FF   F2   E6   D9   CC   BF   B3   A6   99   8C   80   73   66   59   4D   40   33   26   1A   0D  00
+
 -->
 
 <theme defaultView="Hyperspin">
@@ -45,20 +53,20 @@
 	<view name="menu">
 
 		<menuText name="menutitle">
-			<fontPath>./art/moonhouse.ttf</fontPath>
-			<fontSize>0.044</fontSize>
-			<!--<color>${menucolortitulo}</color>-->
+			<fontPath>./art/amiga4ever.ttf</fontPath>
+			<fontSize>0.034</fontSize>
+			<color>${menucolortitulo}</color>
 		</menuText>
 		
 		<menuText name="menufooter">
-			<fontPath>./art/moonhouse.ttf</fontPath>
-			<fontSize>0.022</fontSize>
-			<!--<color>777777FF</color>-->
+			<fontPath>./art/amiga4ever.ttf</fontPath>
+			<fontSize>0.02</fontSize>
+			<color>777777FF</color>
 		</menuText>
 		
 		<menuText name="menutext">
-			<fontPath>./art/moonhouse.ttf</fontPath>
-			<fontSize>0.034</fontSize>
+			<fontPath>./art/amiga4ever.ttf</fontPath>
+			<fontSize>0.022</fontSize>
 			<color>${menucolortexto}</color>
 			<separatorColor>${menucolorseparador}</separatorColor>
 			<selectorColor>${baseColor}</selectorColor>
@@ -68,21 +76,29 @@
 		</menuText>
 		
 		<menuTextSmall name="menutextsmall">
-			<fontPath>./art/moonhouse.ttf</fontPath>
-			<fontSize>0.02</fontSize>
+			<fontPath>./art/amiga4ever.ttf</fontPath>
+			<fontSize>0.015</fontSize>
 			<color>${menucolortitulo}</color>
 		</menuTextSmall>
 
 		<menuBackground name="menubg">
-			<color>${menucolorfondo}</color>
+			<path>./art/Holograma.png</path>
 			<cornerSize>45 45</cornerSize>
-			<path>./art/frame.png</path>
 		</menuBackground>
 		
 		<menuTextEdit name="menutextedit">
 			<inactive>./art/textinput_ninepatch.png</inactive>
 			<active>./art/textinput_ninepatch_active.png</active>
 		</menuTextEdit>
+		
+		<menuGroup name="menugroup">
+			<fontPath>./art/amiga4ever.ttf</fontPath>
+			<fontSize>0.025</fontSize>
+			<color>ffffff</color>
+			<separatorColor>7b868a</separatorColor>    
+			<backgroundColor>5fc9f880</backgroundColor>
+			<lineSpacing>2</lineSpacing>
+		</menuGroup>
 		
 		<menuIcons name="menuicons">
 			<iconKodi>./art/icons/Kodi.png</iconKodi>
@@ -126,7 +142,18 @@
 		<image name="logo">
 			<path>./art/logos/${system.theme}.png</path>
 		</image>
-
+		
+		<!-- Texto de sistema si falta logo -->
+		
+		<text name="logoText">
+			<fontSize>0.04</fontSize>
+			<fontPath>./art/amiga4ever.ttf</fontPath>
+			<color>${baseColor}</color>
+			<glowColor>${glowColor}</glowColor>
+			<glowSize>2</glowSize>
+			<forceUppercase>1</forceUppercase>
+		</text>
+		
 		<carousel name="systemcarousel">
 			<type>vertical_wheel</type>
 			<pos>0.297 0</pos>
@@ -148,7 +175,7 @@
 			<tile>false</tile>
 			<path>./art/pointer/${system.theme}.png</path>
 			<origin>1 0.5</origin>
-			<pos>1 0.5</pos>
+			<pos>0.999 0.5</pos>
 			<size>0.039 0.13</size>
 			<color>FFFFFFFF</color>
 			<zIndex>2</zIndex>
@@ -227,7 +254,6 @@
 		</rating>
 		
 		<imagegrid name="gamegrid">
-
 		  <margin>0.005 0.010</margin>
 		  <pos>0.025 0.16</pos>
 		  <size>0.950 0.34</size>
@@ -236,7 +262,7 @@
 		  <autoLayout>5 2</autoLayout>
 		  <autoLayoutSelectedZoom>1.12</autoLayoutSelectedZoom>
 		  <animateSelection>true</animateSelection>
-		  <centerSelection>false</centerSelection>
+		  <centerSelection>false</centerSelection>	  
 		</imagegrid>
 		
 		<gridtile name="default">
@@ -292,7 +318,7 @@
 			<tile>false</tile>
 			<path>./art/pointer/${system.theme}.png</path>
 			<origin>1 0.5</origin>
-			<pos>1 0.5</pos>
+			<pos>0.999 0.5</pos>
 			<size>0.039 0.13</size>
 			<color>FFFFFFFF</color>
 			<zIndex>2</zIndex>
@@ -346,29 +372,34 @@
 		<imagegrid name="gamegrid">
 			<imageSource>wheel</imageSource>
 			<zIndex>3</zIndex>
-			<pos>0.65 0.02</pos>
+			<pos>0.6735 0.02</pos>
 			<size>0.29 1.13</size>
 			<padding>0.05 0.14 0.05 0.30</padding>
 			<scrollDirection>vertical</scrollDirection>
 			<autoLayout>1 5</autoLayout>
-			<autoLayoutSelectedZoom>1.8</autoLayoutSelectedZoom>
+			<autoLayoutSelectedZoom>1.65</autoLayoutSelectedZoom>
 			<margin>0.005 0.06</margin>
 			<centerSelection>true</centerSelection>
 			<scrollLoop>true</scrollLoop>
 		</imagegrid>
 	
     <gridtile name="default">
-<!--       <padding>64 16</padding>
-      <backgroundCenterColor>FFFFFF00</backgroundCenterColor>
+	
+		<backgroundColor>FFFFFF00</backgroundColor>
+      <backgroundCornerSize>9 9</backgroundCornerSize>
+      <selectionMode>image</selectionMode>
+      <padding>64 16</padding>
+<!--       <backgroundCenterColor>FFFFFF00</backgroundCenterColor>
       <backgroundEdgeColor>FFFFFF00</backgroundEdgeColor>
 	  <maxSize>0.37 0.45</maxSize>
       <imageColor>FFFFFFAA</imageColor>
       <reflexion>0 0</reflexion> -->
     </gridtile>
     <gridtile name="selected">
-      <backgroundCenterColor>FFFFFF00</backgroundCenterColor>
-      <backgroundEdgeColor>FFFFFF00</backgroundEdgeColor>
-      <padding>64 16</padding>
+      <backgroundCenterColor>ffffffff</backgroundCenterColor>
+      <backgroundEdgeColor>ffffff00</backgroundEdgeColor>
+	  <imageColor>FFFFFFFF</imageColor>
+      <padding>60 20</padding>
     </gridtile>
     <text name="gridtile">
       <visible>false</visible>
@@ -381,9 +412,11 @@
       <fontSize>0.035</fontSize>
       <size>0.6 0</size>
     </text>
-    <ninepatch name="gridtile.background:selected">
-      <animateColorTime>0</animateColorTime>
-	</ninepatch> 
+		<ninepatch name="gridtile.background:selected">
+			<animateColor>5fc9f8B0</animateColor>
+			<animateColorTime>450</animateColorTime>
+			<path>./art/marcador.png</path>
+		</ninepatch> 
 
   </customView>
 			
