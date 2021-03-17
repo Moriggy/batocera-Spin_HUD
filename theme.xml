@@ -588,33 +588,6 @@ Opaque/Opaco                           Translucide / Translucido                
 		</text>
 		
 	</view>
-	
-	<!-- Opciones de vista para Cuadricula -->
-	
-	<subset name="videoboxes" displayName="${videoboxesSubsetName}" appliesTo="Boxes,grid">
-		<include name="no" displayName="${no}"/>
-		<include name="yes" displayName="${yes}">./art/grid/videoboxes.xml</include>
-	</subset>
-	
-	<subset name="zoomboxes" displayName="${zoomboxesSubsetName}" appliesTo="Boxes,grid">
-		<include name="no" displayName="${no}"/>
-		<include name="yes" displayName="${yes}">./art/grid/zoomboxes.xml</include>
-	</subset>
-	
-	<subset name="scrolldirection" displayName="Orientation" appliesTo="Tiles,Boxes,grid">
-		<include name="vertical"/>
-		<include name="horizontal">./art/grid/scrollhorz.xml</include>
-	</subset>
-	
-	<subset name="hideselection" displayName="${hideselectionSubsetName}" appliesTo="Boxes,grid">
-		<include name="yes" displayName="${yes}">./art/grid/hidesel.xml</include>
-		<include name="no" displayName="${no}"/>
-	</subset>
-	
-	<subset name="previewbar" displayName="${previewBarSubsetName}" appliesTo="Tiles,Carousel,Boxes,grid">
-		<include name="yes" displayName="${yes}">./art/grid/previewbar.xml</include>
-		<include name="no" displayName="${no}"/>
-	</subset>
 
 	<!-- Subset options for Tiles view -->
 	<subset name="tileborders" displayName="${roundBorderSubsetName}" appliesTo="Tiles">
